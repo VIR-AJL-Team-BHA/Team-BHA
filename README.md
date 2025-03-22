@@ -14,7 +14,7 @@
 
 Image of the visualization above aims to understand data composition and balance.
 
-![image 2](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image2.png) 
+![image 4](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image4.png) 
 
 Image of the visualization above aims to explore relationships between variables given in the data.
 
@@ -22,6 +22,6 @@ Image of the visualization above aims to explore relationships between variables
 
 Image of the visualization above aims to explore the distribution of skin types documented in the data.
 
-![image 4](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image4.png) 
+![image 2](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image2.png) 
 
 Image of the visualization above aims to explore the distribution of skin types per diagnosis.
