@@ -12,11 +12,11 @@
 
 ![image 1](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image1.png) 
 
-Image of the visualization above aims to understand data composition and balance
+Image of the visualization above aims to understand data composition and balance.
 
 ![image 2](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image2.png) 
 
-Image of the visualization above aims to explore relationships between variables given in the data
+Image of the visualization above aims to explore relationships between variables given in the data.
 
 ![image 3](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image3.png) 
 
