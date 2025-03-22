@@ -9,3 +9,7 @@
 *Describe Data Exploration:* In order to explore the data we were given, our group first examined the different kinds of data we were given and the balance within the overall dataset. We also focused on examining relationships between the different variables and data we were given to see how we could leverage those relationships to best identify statistically significant results with our final model.
 
 *Example Data Visualizations:*
+![image 1](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image1.png)
+![image 2](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image2.png)
+![image 3](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image3.png)
+![image 4](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/image4.png)
