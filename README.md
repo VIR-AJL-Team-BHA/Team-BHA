@@ -38,7 +38,11 @@ One major finding includes the effectiveness of transfer learning in improving m
    ```
 3. **Download & Prepare Dataset**
 
-   Download the dataset, extract the files, and ensure they are structured as:
+   1. Download the dataset:
+   ```
+   kaggle competitions download -c bttai-ajl-2025
+   ```
+   2. Ensure the data is structured as:
     ```
     /root folder/
     │── train/                  # Training images
