@@ -1,32 +1,32 @@
 # Equitable AI for Dermatology
 
-## Table of Contents
-* [Team Members](#team-members)
-* [Project Highlights](#project-highlights)
-* [Setup & Execution](#setup--execution)
-* [Project Overview](#project-overview)
-* [Data Exploration](#data-exploration)
-* [Model Development](#model-development)
-* [Results & Key Findings](#results--key-findings)
-* [Impact Narrative](#impact-narrative)
-* [Next Steps](#next-steps)
+## 📚 Table of Contents
+* [Team Members](#-team-members)
+* [Project Highlights](#-project-highlights)
+* [Setup & Execution](#%EF%B8%8F-setup--execution)
+* [Project Overview](#-project-overview)
+* [Data Exploration](#-data-exploration)
+* [Model Development](#%EF%B8%8F-model-development)
+* [Results & Key Findings](#-results--key-findings)
+* [Impact Narrative](#-impact-narrative)
+* [Next Steps](#-next-steps)
 
-## Team Members
-* [Shelby Servis](https://github.com/shelbyydiane)
-* [Nandini Shah](https://github.com/nshah47)
-* [Rosemarie Nasta](https://github.com/rosemarie-17)
-* [Aayat Alsweiti](https://github.com/Aayat-yuh)
-* [Pranavi Reddi](https://github.com/pranavireddi)
-* [Carly Kiang](https://github.com/carlykiang)
+## 🤝 Team Members
+* [Shelby Servis](https://github.com/shelbyydiane): data preprocessing
+* [Nandini Shah](https://github.com/nshah47): exploratory data analysis
+* [Rosemarie Nasta](https://github.com/rosemarie-17): modeling
+* [Aayat Alsweiti](https://github.com/Aayat-yuh): modeling
+* [Pranavi Reddi](https://github.com/pranavireddi): data preprocessing
+* [Carly Kiang](https://github.com/carlykiang): documentation
 
-## Project Highlights
+## 🌟 Project Highlights
 
 This project was developed as part of a Kaggle competition that encourages students to explore how different machine learning models can classify skin conditions across diverse skin tones, ensuring that underrepresented groups are fairly represented. 
 
 For this project, we implemented an image classification model using ResNet-18 to categorize skin conditions. A pre-trained ResNet-18 model is fine-tuned by replacing its final layer to match the number of classes. The model is trained using cross-entropy loss and Adam optimization for 10 epochs.
 
 One major finding includes the effectiveness of transfer learning in improving model accuracy. We also discovered the importance of diverse and inclusive datasets, as they ensure fair and equitable AI models for medical applications.
-## Setup & Execution
+## ⚙️ Setup & Execution
 1. **Clone Repository**
    ```
    git clone https://github.com/VIR-AJL-Team-BHA/Team-BHA
@@ -53,10 +53,10 @@ One major finding includes the effectiveness of transfer learning in improving m
     │── train.csv               
     │── test.csv                
     ```
-## Project Overview
+## 📋 Project Overview
 This Kaggle competition encourages students to explore how different machine learning models can be used to classify skin conditions across diverse skin tones to ensure underrepresented and marginalized groups are equitably represented in the machine learning space. This Kaggle competition connects to the Break Through AI Program since both their missions are centered on increasing inclusivity and fairness in the fields of AI/ML. 
 
-## Data Exploration
+## 🔍 Data Exploration
 The dataset is a subset of the FitzPatrick17k dataset, which is a collection of around 4,500 labeled images of 21 dermatological conditions out of the 100+ in the full FitzPatrick set. The images are scored on the FitzPatrick skin tone scale and they were sourced from reputable dermatology websites. 
 
 In order to explore the data we were given, our group first examined the different kinds of data we were given and the balance within the overall dataset. We also focused on examining relationships between the different variables and data we were given to see how we could leverage those relationships to best identify statistically significant results with our final model.
@@ -77,7 +77,7 @@ Image of the visualization above aims to explore the distribution of skin types 
 
 Image of the visualization above aims to explore the distribution of skin types per diagnosis.
 
-## Model Development
+## 🛠️ Model Development
 
 1. **Model Selection: ResNet-18**
 
@@ -118,7 +118,7 @@ Image of the visualization above aims to explore the distribution of skin types 
    *Why Batch Size = 32?*
     * Provides a good balance between stability and training efficiency
     * Larger batches require more memory.
-## Results & Key Findings
+## 📊 Results & Key Findings
 
 To evaluate the model, we used accuracy as the primary metric and supplemented it with precision, recall, and F1-score to assess performance.
 |Metric|Value|
@@ -130,7 +130,12 @@ To evaluate the model, we used accuracy as the primary metric and supplemented i
 
 The final model achieved 91% accuracy, demonstrating strong generalization across skin condition classes.
 
-## Impact Narrative
+**Confusion Matrix:**
+![confusion_matrix](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/confusion-matrix.png)
+
+As the confusion matrix shows, the model performs well on the majority of classes, with high recall.
+
+## 🌍 Impact Narrative
 
 Imagine a dermatologist in training, excited to use AI-powered tools to diagnose skin conditions. They pull up a model trained on a vast dataset but soon realize it struggles to identify conditions on darker skin tones, a common flaw in medical AI. This isn’t just a technical issue, it’s a matter of health equity, trust, and real-world impact.
 
@@ -143,7 +148,7 @@ We recognized early on that bias in training data could lead to unfair model pre
 - <ins>Balanced Data Processing:</ins> We checked for class imbalances and considered techniques such as oversampling & weighted loss functions to prevent bias toward majority classes.
 
 By aligning with Break Through Tech AI's mission to promote fairness in AI/ML, we reinforced the need for inclusive and ethical AI development. AI is only as good as the data and ethics behind it.
-## Next Steps
+## 🚀 Next Steps
 
 While our ResNet-18 model performed well, we recognize several limitations and opportunities for improvement to make it more fair and generalizable.
 
