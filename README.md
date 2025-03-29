@@ -120,7 +120,15 @@ Image of the visualization above aims to explore the distribution of skin types 
     * Larger batches require more memory.
 ## Results & Key Findings
 
+To evaluate the model, we used accuracy as the primary metric and supplemented it with precision, recall, and F1-score to assess performance.
+|Metric|Value|
+|:---:|:---:|
+|Training Accuracy|91%|
+|Precision (Avg.)|91%|
+|Recall (Avg.)|91%|
+|F1-score (Avg.)|91%|
 
+The final model achieved 91% accuracy, demonstrating strong generalization across skin condition classes.
 
 ## Impact Narrative
 
