@@ -1,4 +1,4 @@
-# Equitable AI for Dermatology
+# ✨ Equitable AI for Dermatology
 
 ## 📚 Table of Contents
 * [Team Members](#-team-members)
@@ -23,7 +23,7 @@
 
 This project was developed as part of a Kaggle competition that encourages students to explore how different machine learning models can classify skin conditions across diverse skin tones, ensuring that underrepresented groups are fairly represented. 
 
-For this project, we implemented an image classification model using ResNet-18 to categorize skin conditions. A pre-trained ResNet-18 model is fine-tuned by replacing its final layer to match the number of classes. The model is trained using cross-entropy loss and Adam optimization for 10 epochs.
+For this project, we implemented an image-classification model using ResNet-18 to categorize skin conditions. A pre-trained ResNet-18 model is fine-tuned by replacing its final layer to match the number of classes. The model is trained using cross-entropy loss and Adam optimization for 10 epochs.
 
 One major finding includes the effectiveness of transfer learning in improving model accuracy. We also discovered the importance of diverse and inclusive datasets, as they ensure fair and equitable AI models for medical applications.
 ## ⚙️ Setup & Execution
@@ -81,11 +81,27 @@ Image of the visualization above aims to explore the distribution of skin types 
 
 1. **Model Selection: ResNet-18**
 
-    Initially, we experimented with a custom Convolutional Neural Network (CNN) designed from scratch. However, the model struggled to achieve high accuracy due to insufficient feature extraction and limited dataset size. Despite adjusting hyperparameters and adding more layers, the CNN failed to generalize well, leading to overfitting and poor performance on unseen data. This prompted us to shift toward transfer learning with ResNet-18, which significantly improved accuracy by leveraging pre-trained feature representations. We chose ResNet-18 due to its strong performance on image classification tasks and its ability to learn complex features. To adapt ResNet-18 to our dataset, we replaced the fully connected (FC) layer to match the number of skin condition classes.
-2. **Hyperparameter Tuning**
+    Initially, we experimented with a custom Convolutional Neural Network (CNN) designed from scratch. However, the model struggled to achieve high accuracy due to:
+   
+      ❌ Insufficient feature extraction
+   
+      ❌ Limited dataset size
+   
+      ❌ Overfitting on training data
+        
+    Despite adjusting hyperparameters and adding more layers, the CNN failed to generalize well, leading to overfitting and poor performance on unseen data. This prompted us to shift toward transfer learning with ResNet-18, which significantly improved accuracy by leveraging pre-trained feature representations. We chose ResNet-18 for the following reasons:
+
+      ✔️ Strong performance on image classification tasks
+
+      ✔️ Pre-trained on ImageNet for robust feature extraction
+
+      ✔️ Ability to learn complex features efficiently
+
+   To adapt ResNet-18 to our dataset, we replaced the fully connected (FC) layer to match the number of skin condition classes.
+3. **Hyperparameter Tuning**
 
    We experimented with different settings and found the following values to be the most effective:
-   |Hyperparameter|Value|
+   |⚙️ **Hyperparameter** |🔢 **Value**|
    |:---:|:---:|
    |Learning Rate|0.001|
    |Optimizer|Adam|
@@ -94,18 +110,20 @@ Image of the visualization above aims to explore the distribution of skin types 
    |Number of Epochs|10|
 
    These hyperparameters were chosen after evaluating validation loss trends and accuracy improvements across different settings.
-3. **Training Approach**
+4. **Training Approach**
 
-    Since ResNet-18 has been pre-trained on ImageNet, we leverage transfer learning by:
-     1. Freezing the early layers to retain general feature extraction capabilities.
-     2. Fine-tuning the FC layers to specialize in skin condition classification.
+    Since ResNet-18 has been pre-trained on ImageNet, we leverage transfer learning:
+   
+     **Step 1.** Freezing the early layers to retain general feature extraction capabilities.
+   
+     **Step 2.** Fine-tuning the FC layers to specialize in skin condition classification.
 
     The training process involves:
      - <ins>Foward pass:</ins> compute model predictions on batches of images.
      - <ins>Loss computation:</ins> measure how far predictions are from actual labels.
      - <ins>Backpropagation:</ins> update weights using Adam optimizer.
      - <ins>Epoch evaluation:</ins> track loss over epochs to monitor model convergence.
-4. **Reason for Approach**
+6. **Reason for Approach**
 
    *Why Transfer Learning?*
     * Faster convergence and better generalization than training from scratch.
@@ -121,48 +139,65 @@ Image of the visualization above aims to explore the distribution of skin types 
 ## 📊 Results & Key Findings
 
 To evaluate the model, we used accuracy as the primary metric and supplemented it with precision, recall, and F1-score to assess performance.
-|Metric|Value|
+|📊 **Metric**|🔢 **Value**|
 |:---:|:---:|
-|Training Accuracy|91%|
-|Precision (Avg.)|91%|
-|Recall (Avg.)|91%|
-|F1-score (Avg.)|91%|
+|✅ Training Accuracy|91%|
+|🎯 Precision (Avg.)|91%|
+|🔄 Recall (Avg.)|91%|
+|📈 F1-score (Avg.)|91%|
 
 The final model achieved 91% accuracy, demonstrating strong generalization across skin condition classes.
 
 **Confusion Matrix:**
 ![confusion_matrix](https://github.com/VIR-AJL-Team-BHA/Team-BHA/blob/main/visualizations/confusion-matrix.png)
 
-As the confusion matrix shows, the model performs well on the majority of classes, with high recall.
+Here are some key findings of the confusion matrix above:
+
+1. 👍 Strong Performance for Some Classes
+   - The model performs well in classifying basal-cell carcinoma (319 correct), squamos-cell carcinoma (403 correct), and melanoma (176 correct), which most predictions along the diagonal.
+   - Other classes like folliculitis (232 correct) and eczema (136 correct) also show strong classification performance.
+2. 👎 Misclassification Trends
+   - Acne is frequently confused with acne vulgaris, with 11 misclassified cases.
+   - Acne vulgaris is also confused for basal cell carcinoma (15 misclassifications), dermatomyositis (14 misclassifications), and folliculitis (34 misclassifications, the most of any class).
+
+The model performs well in distinguishing common skin conditions like folliculitis, actinic keratosis, and squamous-cell carcinoma. However, misclassifications occur in closely related conditions, particularly in malignant melanoma vs. melanoma and acne vs. acne vulgaris.
 
 ## 🌍 Impact Narrative
 
-Imagine a dermatologist in training, excited to use AI-powered tools to diagnose skin conditions. They pull up a model trained on a vast dataset but soon realize it struggles to identify conditions on darker skin tones, a common flaw in medical AI. This isn’t just a technical issue, it’s a matter of health equity, trust, and real-world impact.
+Imagine a dermatologist in training, excited to use AI-powered tools to diagnose skin conditions. They pull up a model trained on a vast dataset but soon realize it struggles to identify conditions on darker skin tones, a common flaw in medical AI.
+
+⚠️This isn’t just a technical issue; it’s a matter of health equity, trust, and real-world impact.
+
+**Bridging the Gap**
 
 This project, built for a Kaggle competition focused on skin condition classification across diverse skin tones, aimed to bridge that gap by ensuring underrepresented and marginalized groups are equitably represented in AI models.
 
-**Addressing Model Fairness:**
+**Addressing Model Fairness**
 
 We recognized early on that bias in training data could lead to unfair model predictions, disproportionately affecting darker skin tones. To mitigate this, we took these steps:
-- <ins>Diverse Dataset Representation:</ins> The dataset included a broad range of skin tones, allowing the model to learn features across different demographics.
-- <ins>Balanced Data Processing:</ins> We checked for class imbalances and considered techniques such as oversampling & weighted loss functions to prevent bias toward majority classes.
 
-By aligning with Break Through Tech AI's mission to promote fairness in AI/ML, we reinforced the need for inclusive and ethical AI development. AI is only as good as the data and ethics behind it.
+✅ <ins>Diverse Dataset Representation:</ins> The dataset included a broad range of skin tones, allowing the model to learn features across different demographics.
+
+✅ <ins>Balanced Data Processing:</ins> We checked for class imbalances and considered techniques such as oversampling & weighted loss functions to prevent bias toward majority classes.
+
+By aligning with Break Through Tech AI's mission to promote fairness in AI/ML, we reinforced the need for inclusive and ethical AI development.
+
+💡 *AI is only as good as the data and ethics behind it.*
 ## 🚀 Next Steps
 
 While our ResNet-18 model performed well, we recognize several limitations and opportunities for improvement to make it more fair and generalizable.
 
-1. **Addressing Dataset Limitations**
+1. **🗂️ Expanding the Dataset**
 
    Our dataset was relatively small, which limited the model's ability to learn rare skin conditions and generalize to real-world scenarios.
 
    <ins>Next Step:</ins> We aim to expand the dataset by exploring additional open-source medical image datasets to improve coverage of underrepresented conditions.
-3. **Improving Model Generalization**
+2. **🎯 Improving Model Generalization**
 
    The model occasionally misclassified visually similar conditions, meaning it struggles with some feature distinctions.
 
    <ins>Next Step:</ins> We plan to fine-tune deeper architectures, such as ResNet-50, for better feature extraction.
-4. **Reducing Training Time**
+3. **⏲️ Reducing Training Time**
 
    Currently, the model takes at least 30 minutes per training cycle, which could be optimized to make the model more practical for retraining.
 
