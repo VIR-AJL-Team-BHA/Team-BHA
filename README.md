@@ -154,13 +154,13 @@ The final model achieved 91% accuracy, demonstrating strong generalization acros
 Here are some key findings of the confusion matrix above:
 
 1. 👍 Strong Performance for Some Classes
-   - The model performs well in classifying basal-cell carcinoma (319 correct), squamos-cell carcinoma (403 correct), and melanoma (176 correct), which most predictions along the diagonal.
-   - Other classes like folliculitis (232 correct) and eczema (136 correct) also show strong classification performance.
+   - The model performs well in classifying basal-cell carcinoma (319 correct), squamos-cell carcinoma (403 correct), and folliculitis (232 correct), with most predictions along the diagonal.
+   - Other classes like melanoma (176 correct) and eczema (136 correct) also show strong classification performance.
 2. 👎 Misclassification Trends
-   - Acne is frequently confused with acne vulgaris, with 11 misclassified cases.
-   - Acne vulgaris is also confused for basal cell carcinoma (15 misclassifications), dermatomyositis (14 misclassifications), and folliculitis (34 misclassifications, the most of any class).
+   - Acne is frequently confused with eczema, with 14 misclassified cases.
+   - Acne vulgaris is also confused for actinic keratosis (15 misclassifications), dermatomyositis (14 misclassifications), and folliculitis (34 misclassifications, the most of any class).
 
-The model performs well in distinguishing common skin conditions like folliculitis, actinic keratosis, and squamous-cell carcinoma. However, misclassifications occur in closely related conditions, particularly in malignant melanoma vs. melanoma and acne vs. acne vulgaris.
+The model performs well in distinguishing common skin conditions like folliculitis, basal-cell carcinoma, and squamous-cell carcinoma. However, misclassifications occur in closely related conditions, particularly in acne vulgaris vs. folliculitis.
 
 ## 🌍 Impact Narrative
 
